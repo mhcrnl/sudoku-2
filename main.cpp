@@ -87,6 +87,34 @@ int dificultate(void){
     return dif;
 }
 
+int dificultateaJocului(int userDiff){
+    int diff;
+    //convert difficulty
+    switch (userDiff){
+        case 1:
+            diff = 48;  //about 40 givens
+            cout << endl;
+            return diff;
+            break;
+        case 2:
+            diff = 30;  //about 26 givens
+            cout << endl;
+            return diff;
+            break;
+        case 3:
+            diff = 20;  //about 17 givens
+            cout << endl;
+            return diff;
+            break;
+        default:
+            cout << "Invalid character. Default difficulty is easy." << endl;
+            diff = 48;
+            return diff;
+            break;
+    }//close switch userDiff
+
+}
+
 int main(){
 
 
@@ -94,29 +122,29 @@ int main(){
     //declare constant difficulty integer
     int diff;
     int userDiff = dificultate();
-
+    diff = dificultateaJocului(userDiff);
     //prompt difficulty
 
 
     //convert difficulty
-    switch (userDiff){
-        case 1:
-            diff = 48;  //about 40 givens
-            cout << endl;
-            break;
-        case 2:
-            diff = 30;  //about 26 givens
-            cout << endl;
-            break;
-        case 3:
-            diff = 20;  //about 17 givens
-            cout << endl;
-            break;
-        default:
-            cout << "Invalid character. Default difficulty is easy." << endl;
-            diff = 48;
-            break;
-    }//close switch userDiff
+//    switch (userDiff){
+//        case 1:
+//            diff = 48;  //about 40 givens
+//            cout << endl;
+//            break;
+//        case 2:
+//            diff = 30;  //about 26 givens
+//            cout << endl;
+//            break;
+//        case 3:
+//            diff = 20;  //about 17 givens
+//            cout << endl;
+//            break;
+//        default:
+//            cout << "Invalid character. Default difficulty is easy." << endl;
+//            diff = 48;
+//            break;
+//    }//close switch userDiff
 
     //lets play
     cout << "Let's play!" << endl << endl;
@@ -372,7 +400,25 @@ int main(){
             cout << "Congratulations! You have completed this puzzle with only "
                 << countWrong << " wrong guesses." << endl;
         }//close else if
-
+//convert difficulty
+    switch (userDiff){
+        case 1:
+            diff = 48;  //about 40 givens
+            cout << endl;
+            break;
+        case 2:
+            diff = 30;  //about 26 givens
+            cout << endl;
+            break;
+        case 3:
+            diff = 20;  //about 17 givens
+            cout << endl;
+            break;
+        default:
+            cout << "Invalid character. Default difficulty is easy." << endl;
+            diff = 48;
+            break;
+    }//close switch userDiff
         //ask to play again
         cout << "Would you like to play again? (y/n): ";
         cin >> p;
